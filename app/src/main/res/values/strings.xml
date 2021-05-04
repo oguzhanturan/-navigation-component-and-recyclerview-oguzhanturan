@@ -5,6 +5,25 @@
     <string name="log_in">Log in</string>
     <string name="create_an_account">Create an account</string>
     <string name="this_field_is_required">This field is required.</string>
+    <string name="identifier_invanlid">Identifier is invalid.</string>
     <string name="identifier_is_too_short">Identifier is too short.</string>
+    <string name="identifier_is_too_long">Identifier is too long.</string>
+    <string name="identifier_must_contains">Identifier must contain @ and .</string>
+    <string name="username_must_contains">must not consist characters except: a–z, 0-9 and _</string>
+    <string name="password_must_contains">Password must contain one digit, one uppercase letter, one lowercase letter and one special character.</string>
+    <string name="title_activity_signup">SignupActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="username">Username</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_account">Already Have An Account?</string>
+    <string name="email">Email</string>
     <string name="add_to_cart">Add to cart</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

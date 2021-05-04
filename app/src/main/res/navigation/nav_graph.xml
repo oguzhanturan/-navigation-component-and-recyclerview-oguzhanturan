@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/productListFragment">
 
@@ -11,6 +12,9 @@
         <action
             android:id="@+id/loginSuccessful"
             app:destination="@id/productListFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
     </fragment>
 
     <fragment
@@ -31,4 +35,9 @@
         android:id="@+id/productDetailFragment"
         android:name="school.cactus.succulentshop.product.detail.ProductDetailFragment"
         android:label="ProductDetailFragment" />
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="school.cactus.succulentshop.signup.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" />
 </navigation>

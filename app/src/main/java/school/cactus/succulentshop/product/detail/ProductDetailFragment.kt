@@ -5,15 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import school.cactus.succulentshop.R
 import school.cactus.succulentshop.databinding.FragmentProductDetailBinding
 import school.cactus.succulentshop.product.BUNDLE_KEY_PRODUCT_ID
+import school.cactus.succulentshop.product.list.ProductDecoration
 import school.cactus.succulentshop.product.list.ProductStore
 
 class ProductDetailFragment : Fragment() {
     private var _binding: FragmentProductDetailBinding? = null
 
     private val binding get() = _binding!!
+
+    private val adapter = RelatedProductAdapter()
 
     private val store = ProductStore()
 
@@ -33,6 +37,12 @@ class ProductDetailFragment : Fragment() {
 
         val productId = requireArguments().getInt(BUNDLE_KEY_PRODUCT_ID)
         val product = store.findProduct(productId)
+
+        binding.relatedProductRecyclerView.adapter = adapter
+        binding.relatedProductRecyclerView.layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.HORIZONTAL)
+        binding.relatedProductRecyclerView.addItemDecoration(RelatedProductDecoration())
+        adapter.submitList(store.products)
+
 
         binding.apply {
             imageView.setImageResource(product.imageUrl)

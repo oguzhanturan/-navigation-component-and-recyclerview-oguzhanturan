@@ -74,5 +74,23 @@
             android:orientation="vertical"
             app:layout_constraintGuide_end="16dp" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Related Products :"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/addToCardButton" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/relatedProductRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:orientation="horizontal"/>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>
