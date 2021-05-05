@@ -45,4 +45,5 @@ class ProductStore {
     )
 
     fun findProduct(id: Int) = products.find { it.id == id }!!
+    fun relatedProducts(productId: Int): List<Product> = products.filter { it.id != productId}
 }

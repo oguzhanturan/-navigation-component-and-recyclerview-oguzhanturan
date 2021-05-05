@@ -34,7 +34,20 @@
     <fragment
         android:id="@+id/productDetailFragment"
         android:name="school.cactus.succulentshop.product.detail.ProductDetailFragment"
-        android:label="ProductDetailFragment" />
+        android:label="ProductDetailFragment" >
+        <action
+            android:id="@+id/openProductDetailFragmentSelf"
+            app:destination="@id/productDetailFragment"
+            app:popUpTo="@id/productDetailFragment"
+            app:popUpToInclusive="true" >
+            <argument
+                android:name="productId"
+                android:defaultValue="-1" />
+        </action>
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/signupFragment"
         android:name="school.cactus.succulentshop.signup.SignupFragment"
