@@ -39,6 +39,7 @@ class RelatedProductAdapter : ListAdapter<Product, RelatedProductAdapter.Related
             Glide.with(binding.root.context)
                 .load(product.imageUrl)
                 .override(512)
+                .override(400, 400)
                 .into(binding.imageView)
 
             binding.root.setOnClickListener {

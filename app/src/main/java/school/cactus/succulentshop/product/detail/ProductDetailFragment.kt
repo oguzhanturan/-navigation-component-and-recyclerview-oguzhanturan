@@ -1,6 +1,7 @@
 package school.cactus.succulentshop.product.detail
 
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -56,6 +57,8 @@ class ProductDetailFragment : Fragment() {
             priceText.text = product.price
             descriptionText.text = product.description
         }
+
+
     }
 
     override fun onDestroyView() {
