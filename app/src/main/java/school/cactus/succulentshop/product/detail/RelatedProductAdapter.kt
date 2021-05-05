@@ -35,11 +35,10 @@ class RelatedProductAdapter : ListAdapter<Product, RelatedProductAdapter.Related
         fun bind(product: Product) {
             binding.titleText.text = product.title
             binding.priceText.text = product.price
-            binding.imageView.setImageResource(product.imageUrl)
-
+            /*binding.imageView.setImageResource(product.imageUrl)*/
             Glide.with(binding.root.context)
                 .load(product.imageUrl)
-                .override(256)
+                .override(512)
                 .into(binding.imageView)
 
             binding.root.setOnClickListener {

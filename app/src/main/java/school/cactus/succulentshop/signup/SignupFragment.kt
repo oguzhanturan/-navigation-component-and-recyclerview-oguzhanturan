@@ -38,8 +38,12 @@ class SignupFragment : Fragment() {
             signUpButton.setOnClickListener {
                 if (passwordInputLayout.isValid() and usernameInputLayout.isValid() and
                     emailInputLayout.isValid()) {
-                    findNavController().navigate(R.id.loginSuccessful)
+                    findNavController().navigate(R.id.productListFragment)
                 }
+            }
+
+            alreadyHaveAccountButton.setOnClickListener {
+                findNavController().navigate(R.id.loginFragment)
             }
         }
 
